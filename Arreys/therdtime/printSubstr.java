@@ -16,7 +16,7 @@ public class printSubstr {
             }
             System.out.println();
         }
-        System.out.println("Total SubArrey " + ts);
+        System.out.println("Total SubArrey = " + ts);
           
     }
     public static void main(String[] args) {
