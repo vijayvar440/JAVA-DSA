@@ -1,21 +1,33 @@
 public class qtions {
-    public static int Findindes(int arrey []){
-        int target = 30;
-        int index = 0;
+    public static int Findtreget(int arrey[], int target ){
+        int left =  0;
+        int right = arrey.length-1;
 
-        for(int i = 0; i <arrey.length; i++){
-            if (target == arrey[i]) {
+        while (left<=right) {
+            int mid = (left+right)/2;
+
+            if (arrey[mid]==target) {
+                return mid;
+
                 
-                index  = arrey[i];
-                
+            }else if (arrey[mid]>target){
+                right = mid-1;
+            }else{
+                left = mid+1;
             }
-           
-
+            
         }
-         return index;
+        return -1;
     }
+
+
+
+
+    
     public static void main(String[] args) {
+        int atregt = 30;
         int number [] = {10,20,30,40,50};
-        System.out.println(Findindes(number));
+       System.out.println(Findtreget(number,atregt));
     }
+
 }
