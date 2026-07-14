@@ -9,7 +9,7 @@ public interface QtionF {
             }
 
     
-        }   
+        }
         return false;
     }
         public static void main(String[] args) {
