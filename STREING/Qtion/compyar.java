@@ -16,5 +16,5 @@ public class compyar {
         CopyarLargestStr(fruts);
     }
 
-    sdfghjkl;
+
 }
