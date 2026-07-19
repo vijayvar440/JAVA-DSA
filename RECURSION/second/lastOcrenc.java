@@ -5,16 +5,12 @@ public class lastOcrenc {
             
         }
         int isShorted =  lastOcrenc(arrey, key, idx+1);
-        if (isShorted != -1) {
-            return isShorted;
+        if (isShorted == -1 && arrey[idx] == key) {
+            return idx;
+            
             
         }
-
-        if (arrey[idx] == key) {
-              return  idx;
-            
-        }
-        return -1;
+        return isShorted;
       
         
     }
