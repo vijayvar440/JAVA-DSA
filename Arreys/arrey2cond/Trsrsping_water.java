@@ -1,3 +1,5 @@
+package arrey2cond;
+
 public class Trsrsping_water {
     public static int Traping_water(int hight[] ){
         int n = hight.length;

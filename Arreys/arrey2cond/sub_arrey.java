@@ -1,4 +1,4 @@
-// package arrey2cond;
+ package arrey2cond;
 
 public class sub_arrey {
 
