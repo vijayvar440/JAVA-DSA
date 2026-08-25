@@ -1,21 +1,23 @@
-import java.util.*;
+
 public class largestArrey {
-    public static int lagestArrey(int arrey[]){
-        int largest = Integer.MIN_VALUE;
-   
 
+    public static int largestNumber(int number[]) {
+        int lagest =  Integer.MIN_VALUE;
 
-        for(int i = 0; i <arrey.length; i++){
-            if (largest<arrey[i]) {
-                largest =  arrey[i];
-            
+        for(int i = 0; i<number.length;i++){
+            if (lagest<number[i]) {
+                lagest = number[i];
+                
             }
         }
-        return largest;
+        return lagest;
+
 
     }
     public static void main(String[] args) {
-        int arr[] =  {10,30,40,50,06,70} ;
-        System.out.print(lagestArrey(arr));
+        
+        int arrey[] = {10,20,30,40,50};
+        
+        System.out.println(largestNumber(arrey));
     }
 }
