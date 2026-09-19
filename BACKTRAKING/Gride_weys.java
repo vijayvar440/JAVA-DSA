@@ -16,7 +16,7 @@ public class Gride_weys {
          return  w1+w2;
     }
     public static void main(String[] args) {
-        int n=3,m=3;
+        int n=4,m=3;
         System.out.println(gridWeys(0, 0, n, m));
           
     }
