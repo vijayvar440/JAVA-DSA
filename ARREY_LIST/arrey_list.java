@@ -8,7 +8,7 @@ public class arrey_list {
         list.add(2);
         list.add(3);
 
-        System.err.println(list);
+        System.out.println(list);
 
     //   // get element
     //     int element = list.get(2);
