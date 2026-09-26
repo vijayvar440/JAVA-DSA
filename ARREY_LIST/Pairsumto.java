@@ -56,4 +56,4 @@ public class Pairsumto {
         System.out.println(tosumarrey(list, target));
     }
 }
-
+dd
