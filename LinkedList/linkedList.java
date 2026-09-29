@@ -64,7 +64,7 @@ public class linkedList {
         Node temp = head;
 
         while (temp != null) {
-            System.out.print(temp.data + " ");
+            System.out.print(temp.data + " ->");
             temp = temp.next;
         }
 
@@ -80,7 +80,8 @@ public class linkedList {
 
         ll.addFirst(2);
         ll.addFirst(1);
-
+          
+        ll.print();
         ll.addLast(3);
         ll.addLast(4);
 
