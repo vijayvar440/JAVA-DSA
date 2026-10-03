@@ -1,90 +1,64 @@
-public class linkedList {
+import java.util.LinkedList;
 
-    // Node class
-    public static class Node {
-        int data;
-        Node next;
+import corejava.Arreys.arrey_first.reavars;
+import corejava.PATTERNS.PATTERN1.number;
 
-        public Node(int data) {
-            this.data = data;
-            this.next = null;
+public  class linkedList {
+    public static  class Node {
+        int date;
+        node next;
+
+        public  Node (int data){
+            this.date =  data;
+            this.next =  null; 
         }
     }
 
-    // Head and Tail
-    public static Node head;
-    public static Node tail;
 
-    // Add First
-    public void addFirst(int data) {
+    public  static  Node head;
+    public  static  Node tail;
 
-        // Create new node
-        Node newNode = new Node(data);
+    public void  addFirst(int data){
+        Node newNode =  new Node(data);
 
-        // If Linked List is empty
-        if (head == null) {
+        if (head==null) {
             head = tail = newNode;
-            return;
+
+            return ;
+            
         }
 
-        // New node points to current head
-        newNode.next = head;
+        // new node next =  head 
 
-        // New node becomes head
-        head = newNode;
+        newNode.next  = head  ;  //link
+
+        // head =  newNode
+
+        head =  newNode;
+
     }
 
-    // Add Last
-    public void addLast(int data) {
+    public  void  addLast(int data){
+        Node newNode =  new  Node(data);
 
-        // Create new node
-        Node newNode = new Node(data);
-
-        // If Linked List is empty
-        if (head == null) {
+        if (head==null) {
             head = tail = newNode;
-            return;
+            return ;
+            
         }
 
-        // Current tail points to new node
         tail.next = newNode;
-
-        // New node becomes tail
         tail = newNode;
     }
 
-    // Print Linked List
-    public void print() {
 
-        if (head == null) {
-            System.out.println("LL is empty");
-            return;
-        }
-
-        Node temp = head;
-
-        while (temp != null) {
-            System.out.print(temp.data + " ->");
-            temp = temp.next;
-        }
-
-        System.out.println();
-    }
-
-    // Main
     public static void main(String[] args) {
 
-        linkedList ll = new linkedList();
-
-        ll.print();
-
+        LinkedList ll = new LinkedList();
         ll.addFirst(2);
         ll.addFirst(1);
-          
-        ll.print();
         ll.addLast(3);
         ll.addLast(4);
-
-        ll.print();
     }
+    
 }
