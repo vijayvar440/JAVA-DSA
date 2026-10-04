@@ -1,64 +1,77 @@
-import java.util.LinkedList;
+public class linkedList {
 
-import corejava.Arreys.arrey_first.reavars;
-import corejava.PATTERNS.PATTERN1.number;
+    public static class Node {
+        int data;
+        Node next;
 
-public  class linkedList {
-    public static  class Node {
-        int date;
-        node next;
-
-        public  Node (int data){
-            this.date =  data;
-            this.next =  null; 
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
         }
     }
 
+    public static Node head;
+    public static Node tail;
 
-    public  static  Node head;
-    public  static  Node tail;
+    public void addFirst(int data) {
 
-    public void  addFirst(int data){
-        Node newNode =  new Node(data);
+        Node newNode = new Node(data);
 
-        if (head==null) {
+        if (head == null) {
             head = tail = newNode;
-
-            return ;
-            
+            return;
         }
 
-        // new node next =  head 
-
-        newNode.next  = head  ;  //link
-
-        // head =  newNode
-
-        head =  newNode;
-
+        newNode.next = head;
+        head = newNode;
     }
 
-    public  void  addLast(int data){
-        Node newNode =  new  Node(data);
+    public void addLast(int data) {
 
-        if (head==null) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
             head = tail = newNode;
-            return ;
-            
+            return;
         }
 
         tail.next = newNode;
         tail = newNode;
     }
 
+    public void printLL() {
+
+        if (head == null) {
+            System.out.println("LL is empty");
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+
+        System.out.println("null");
+    }
 
     public static void main(String[] args) {
 
-        LinkedList ll = new LinkedList();
+        linkedList ll = new linkedList();
+
+        ll.printLL();
+
         ll.addFirst(2);
+        ll.printLL();
+
         ll.addFirst(1);
+        ll.printLL();
+
         ll.addLast(3);
+        ll.printLL();
+
         ll.addLast(4);
+        ll.printLL();
     }
-    
 }
