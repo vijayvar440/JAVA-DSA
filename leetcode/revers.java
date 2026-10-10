@@ -11,8 +11,9 @@ class revers {
                     return 0;
                 }
 
-            if (result<Integer.MIN_VALUE/10|| (result== Integer.MIN_VALUE/10 && Digit < -8)) {
-                return 0;
+            if (result<Integer.MIN_VALUE/10|| 
+                      (result== Integer.MIN_VALUE/10 && Digit < -8)) {
+                       return 0;
                 
             }
 
