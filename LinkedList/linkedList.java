@@ -192,6 +192,31 @@ public void reverse(){
 }
 
 
+
+public int helpera(Node head, int key){
+    if(head == null){
+        return -1;
+    }
+
+    if(head.data == key){
+        return 0;
+    }
+    int idx = helper(head.next, key);
+    if(idx == -1){
+        return -1;
+    }
+    return idx+1;
+
+
+}
+public int recersivSerch(int key){
+    return helpera(head , key);
+};
+ 
+
+
+
+
     public static void main(String[] args) {
 
         linkedList ll = new linkedList();
@@ -214,8 +239,8 @@ public void reverse(){
         // ll.printLL();
         // System.out.println(size);
 
-        // System.out.println(ll.recSearch(3));
-        // System.out.println(ll.recSearch(10));
+         System.out.println(ll.recersivSerch(3));
+         System.out.println(ll.recersivSerch(10));
 
         ll.reverse();
         ll.printLL();
